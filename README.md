@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+# 🍽️ Recipe App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React application that lets you search for recipes and explore detailed meal information — powered by the [TheMealDB](https://www.themealdb.com/) public API.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 🔍 **Search Recipes** — Search meals by name using the live MealDB API
+- 🃏 **Meal Cards** — Browse search results displayed as visual cards with images
+- 📄 **Recipe Detail Page** — View full meal info including category, area, ingredients, and step-by-step instructions
+- 🔗 **Dynamic Routing** — Each meal has its own URL (`/:mealid`) for direct linking
+- ⚠️ **Input Validation** — Prompts the user if the search bar is submitted empty
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+| Layer      | Technology               |
+|------------|--------------------------|
+| Frontend   | React.js (CRA)           |
+| Routing    | React Router DOM v6      |
+| Styling    | Plain CSS                |
+| State Mgmt | React Hooks (useState, useEffect) |
+| Data Source | TheMealDB Public API    |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📁 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+recipe-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── Component/
+│   │   ├── Mainpage.js       # Home page with search bar
+│   │   ├── Mealcards.js      # Grid of recipe cards
+│   │   └── mealinfo.js       # Full recipe detail page
+│   ├── App.js                # Route definitions
+│   ├── App.css
+│   ├── index.js              # Entry point with BrowserRouter
+│   └── index.css             # Global styles
+├── package.json
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🌐 API Used
 
-### `npm run eject`
+This app uses the free **[TheMealDB API](https://www.themealdb.com/api.php)**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Endpoint | Usage |
+|----------|-------|
+| `search.php?s={name}` | Search meals by name |
+| `lookup.php?i={id}` | Fetch full details of a meal by ID |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+No API key is required.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Node.js](https://nodejs.org/) (v16 or above)
+- [npm](https://www.npmjs.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+1. **Clone the repository**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   git clone https://github.com/Shishir-ssr01/recipe-app.git
+   cd recipe-app
+   ```
 
-### Analyzing the Bundle Size
+2. **Install dependencies**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npm install
+   ```
 
-### Making a Progressive Web App
+3. **Start the development server**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   npm start
+   ```
 
-### Advanced Configuration
+   The app will run at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🧭 App Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+Home (/)
+ └── Search bar → calls TheMealDB API
+      └── Results displayed as Meal Cards
+           └── "View Recipe" button → navigates to /:mealid
+                └── Meal Detail Page shows image, category, area,
+                    ingredients list, and full instructions
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🧪 Available Scripts
+
+| Command         | Description                       |
+|-----------------|-----------------------------------|
+| `npm start`     | Runs the app in development mode  |
+| `npm run build` | Builds the app for production     |
+| `npm test`      | Launches the test runner          |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+**Shishir** — [@Shishir-ssr01](https://github.com/Shishir-ssr01)
+
+---
+
+> ⭐ If you found this project helpful, please consider giving it a star on GitHub!
