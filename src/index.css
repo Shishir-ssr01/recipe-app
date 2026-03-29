@@ -1,0 +1,155 @@
+/* ===============================
+   Base Styles
+================================ */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ===============================
+   Search Bar
+================================ */
+.searchBar {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 22px;
+}
+
+.searchBar input {
+  width: 400px;
+  padding: 9px;
+  font-size: 22px;
+  border: none;
+  background-color: #e7e7e7;
+  border-radius: 6px;
+}
+
+.searchBar button {
+  width: 90px;
+  background-color: orange;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===============================
+   Meals Grid (search results)
+================================ */
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+  justify-content: center;
+  width: 90%;
+  margin: 44px auto 0 auto;
+}
+
+.meals img {
+  width: 100%;
+  height: 270px;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+.mealImg {
+  width: 280px;
+  height: 380px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 3px 3px rgb(240, 240, 240);
+  border-radius: 11px;
+}
+
+.mealImg p {
+  font-weight: 600;
+}
+
+.mealImg button {
+  width: 120px;
+  background-color: orange;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 21px;
+  padding: 7px;
+  cursor: pointer;
+}
+
+/* ===============================
+   Meal Detail Page
+================================ */
+.mealInfo {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  background-color: rgb(255, 181, 42);
+  padding: 32px;
+
+  margin: auto;
+  border-radius: 12px;
+}
+
+.mealInfo img {
+  width: 400px;
+  height: 400px;
+  border-radius: 11px;
+  object-fit: cover;
+}
+
+.mealInfo button {
+  border: none;
+  padding: 9px;
+  border-radius: 6px;
+  font-size: 19px;
+  background-color: orangered;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.mealInfo .info {
+  flex: 1;
+}
+
+/* ===============================
+   Ingredients List
+================================ */
+.ingredients {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  gap: 8px 20px;
+}
+
+.ingredients li {
+  background: #fff8e6;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   Utility / Misc
+================================ */
+.msg {
+  text-align: center;
+}
+
+.head {
+  text-align: center;
+}
